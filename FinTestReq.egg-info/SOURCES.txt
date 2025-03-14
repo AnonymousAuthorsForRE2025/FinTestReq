@@ -1,0 +1,5 @@
+setup.py
+FinTestReq.egg-info/PKG-INFO
+FinTestReq.egg-info/SOURCES.txt
+FinTestReq.egg-info/dependency_links.txt
+FinTestReq.egg-info/top_level.txt

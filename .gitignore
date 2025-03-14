@@ -1,0 +1,7 @@
+train_llm/output/checkpoint*
+train_llm/output/train_llm.log
+train_llm/output/mengzi*
+train_llm/predict_data/validate*
+train_llm/__pycache__/
+ours/__pycache__/
+model/

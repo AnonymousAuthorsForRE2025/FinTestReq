@@ -1,0 +1,29 @@
+LLM: DeepSeek-R1(https://chat.deepseek.com/)
+
+
+
+**English Prompt:**
+Definition of Task:  Please assist me in completing the task of requirement information extraction from securities trading rule documents. Requirement Information Extraction aims at accurately identifying and extracting key entities from the documents. 
+Definition of Entity Type: The entity types should be strictly limited to Trading Market, Trading Product, Trading Method, Trading Operation, Trading Participant, Time, Quantity, Price, Label, and Instance. 
+Special Annotation Explanation: Each entity type is clearly defined, and for entities of undefined types, “label” and “instance” should be used for annotation. For example, in the rule “When using the matching trading method, the declared quantity should be 100,000 yuan or its integer multiple,” “declared quantity” should be annotated as “label,” and “100,000 yuan or its integer multiple” should be annotated as “instance,” indicating that the latter is a specific instance of the former. 
+Output Format : The output format must strictly adhere to the standard of “entity type: entity.” 
+Other Instruction: Please refer to the input and output formats in the example file to ensure accurate and standardized annotation, and only extract entities from the original text without adding any additional information.
+Example:
+1. Input: If the matching trading method is adopted, the declared quantity of bonds should be 100,000 yuan or its multiples.
+   Output: Trading Method: Matching Trading, Trading Product: Bond, Label: Declared Quantity, Instance: 100,000 yuan or its multiple
+2. Input: The minimum unit change of declared price for buying and selling ChiNext stocks through competitive bidding is 0.001 yuan.
+   Output: Trading Method: Competitive Bidding, Trading Product: ChiNext Stocks, Label: Minimum Unit Change of Declared Price, Instance: 0.001 yuan
+
+
+
+**Chinese Prompt:**
+任务定义：请协助我完成从证券交易规则文档中提取需求信息的任务。需求信息提取旨在从文档中准确识别和提取关键实体。
+实体类型定义：实体类型应严格限于交易市场、交易产品、交易方式、交易操作、交易参与者、时间、数量、价格、标签和实例。
+特殊注释说明：每个实体类型都有明确的定义，对于未定义类型的实体，应使用“标签”和“实例”进行注释。例如，在规则“使用匹配交易方法时，申报数量应为10万元或其整数倍”中，“申报数量”应标注为“标签”，“10万元”或其整数倍数应标注为”实例“，表示后者是前者的特定实例。
+输出格式：输出格式必须严格遵循“实体类型：实体”的标准
+其他说明：请参考示例文件中的输入和输出格式，以确保准确和标准化的注释，并且只从原始文本中提取实体，而不添加任何额外信息。
+例子：
+1.输入：如果采用匹配交易方式，债券申报数量应为10万元或其倍数。
+输出：交易方式：匹配交易，交易产品：债券，标签：申报数量，实例：10万元或其倍数
+2.输入：通过竞价买卖创业板股票申报价格的最小单位变动为0.001元。
+输出：交易方式：竞价，交易产品：创业板股票，标签：申报价格最小单位变动，实例：0.001元
